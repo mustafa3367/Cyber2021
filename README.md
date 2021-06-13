@@ -29,8 +29,14 @@ ELK	Monitoring	10.0.0.8	Linux
 
 
 In addition to the above, Azure has provisioned a load balancer in front of all machines except for the jump box. The load balancer's targets are organized into the following availability zones:
-•	Availability Zone 1: DVWA 1 + DVWA 2
-•	Availability Zone 2: ELK
+
+
+Availability Zone 1: DVWA 1 + DVWA 2
+
+
+Availability Zone 2: ELK
+
+
 ELK Server Configuration
 The ELK VM exposes an Elastic Stack instance. Docker is used to download and manage an ELK container.
 Rather than configure ELK manually, we opted to develop a reusable Ansible Playbook to accomplish the task. This playbook is duplicated below.
